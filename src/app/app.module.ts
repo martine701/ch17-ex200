@@ -1,18 +1,24 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppComponent, PepperoniComponent } from './app.component';
+import { OtherComponent, NestedCalzoneComponent, NestedPastaComponent } from './other-component/other-component.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PepperoniComponent,
+    OtherComponent,
+    NestedCalzoneComponent,
+    NestedPastaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }

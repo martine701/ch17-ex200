@@ -1,32 +1,37 @@
 import { Component } from '@angular/core';
+import { Router, ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
+
+@Component({
+  selector: 'pepperoni',
+  template: `
+  <div>
+    <h2>Pepperoni</h2>
+    <img alt="pepperoni pizza" src="https://thumb1.shutterstock.com/display_pic_with_logo/55755/161642033/stock-photo-single-slice-of-pepperoni-meat-isolated-on-white-with-path-shot-from-above-161642033.jpg">
+  </div>
+  `,
+  styles: []
+})
+export class PepperoniComponent { }
 
 @Component({
   selector: 'app-root',
   template: `
-    <!--The content below is only a placeholder and can be replaced.-->
-    <div style="text-align:center" class="content">
-      <h1>
-        Welcome to {{title}}!
-      </h1>
-      <span style="display: block">{{ title }} app is running!</span>
-      <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+    <div>
+      <h1>Delivery Menu</h1>
     </div>
-    <h2>Here are some links to help you start: </h2>
-    <ul>
-      <li>
-        <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-      </li>
-      <li>
-        <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-      </li>
-      <li>
-        <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-      </li>
-    </ul>
+    <a [routerLink]="['pepperoni']" routerLinkActive="router-link-active">Pepperoni Pizza</a>&nbsp;
+    <a [routerLink]="['other']" routerLinkActive="router-link-active">Other Menu Items</a>
     <router-outlet></router-outlet>
   `,
-  styles: []
+  styles: [
+    'img{width:200px;border:1px solid #000000;}',
+    'a{ background-color: #0066CC; color: #ffffff; border: 1px solid #000000; padding: 10px; margin: 10px;}',
+    '.router - link - active { background-color: #C14242;  }',
+    '.router - link - active { background-color: #C14242; }',
+    'div{  border: 1px dotted #000000;  margin: 10px;  padding: 10px;}'
+  ]
 })
+
 export class AppComponent {
-  title = 'ch17-ex200';
+  title = 'app';
 }
